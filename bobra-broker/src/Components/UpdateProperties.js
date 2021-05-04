@@ -7,6 +7,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import './style.css';
 import { Breadcrumb, Container, Row, Col } from 'react-bootstrap';
+import Button from '@material-ui/core/Button';
 
 function UpdateProperties(){
 
@@ -24,7 +25,7 @@ function UpdateProperties(){
 
     let history = useHistory();
 
-    const propertyUrl = `https://localhost:44392/api/properties/${id}`
+    const propertyUrl = `https://localhost:44317/api/properties/${id}`
    
     useEffect(() => {
         if(properties.length === 0) {
@@ -91,6 +92,7 @@ const classes = useStyles();
         </div>
         <br></br>
         <input type='submit' value='Spara Ändringar' className='btn btn-block' />
+        <Button onClick={()=>GoBack()}>Gå tillbaka</Button>
         </form>
       </Container>
     )

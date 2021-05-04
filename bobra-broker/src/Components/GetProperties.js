@@ -20,7 +20,7 @@ import { purple } from '@material-ui/core/colors';
 function GetProperties(){
     
     let history = useHistory();
-    const propertyUrl = `https://localhost:44392/api/properties`
+    const propertyUrl = `https://localhost:44317/api/Properties`
     const [properties, setProperties] = useState([]);
 
     useEffect(() => {
@@ -63,74 +63,6 @@ function GetProperties(){
       });
 
 return (
-        //     <h1 className="rubrik">Properties</h1>
-        // <>
-        //     <table>
-        //     <div className="head">
-        //         <th>
-        //             Adress
-        //         </th>
-        //         <th>
-        //             Byggnads år
-        //         </th>
-        //         <th>
-        //             Antal rum
-        //         </th>
-        //         <th>
-        //             Boarea
-        //         </th>
-        //         <th>
-        //             Hustyp
-        //         </th>
-        //         <th>
-        //             Tomtarea
-        //         </th>
-        //         <th>
-        //             Biarea
-        //         </th>
-        //         <th>
-        //             Visningsdatum
-        //         </th>
-        //     </div>
-        //     <div>
-        //     {properties.map( item => (
-        //         <div>
-        //         <td>
-        //             {item.adress}
-        //         </td>
-        //         <td>
-        //             {item.buildYear}
-        //         </td>
-        //         <td>
-        //             {item.rooms}
-        //         </td>
-        //         <td>
-        //             {item.livingArea}
-        //         </td>
-        //         <td>
-        //             {item.houseType}
-        //         </td>
-        //         <td>
-        //             {item.plotArea}
-        //         </td>
-        //         <td>
-        //             {item.biArea}
-        //         </td>
-        //         <td>
-        //             {item.viewingDate}
-        //         </td>
-        //         <td>
-        //             <Breadcrumb className="knappar">
-        //             <Breadcrumb.Item onClick={()=>Change(item.propertyID)}>Ändra</Breadcrumb.Item>
-        //             <Breadcrumb.Item onClick={()=>Delete(item.propertyID)}>Ta bort</Breadcrumb.Item>
-        //             <Breadcrumb.Item onClick={()=>Interest(item.propertyID)}>Intresseanmälan</Breadcrumb.Item>
-        //             </Breadcrumb>
-        //         </td>
-        //         </div>
-        //     ))}
-        //     </div>
-        //     </table>
-        // </>
         <TableContainer component={Paper}>
         <Table className={classes.table} aria-label="simple table">
           <TableHead>

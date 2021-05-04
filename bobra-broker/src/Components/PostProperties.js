@@ -6,10 +6,11 @@ import './style.css';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import { Breadcrumb, Container, Row, Col } from 'react-bootstrap';
+import Button from '@material-ui/core/Button';
 
 function PostProperties(){
 
-    const propertyUrl = `https://localhost:44392/api/properties`
+    const propertyUrl = `https://localhost:44317/api/Properties`
 
     const [address, setAdress] = useState('');
     const [ByggnadsÅr, setByggnadsÅr] = useState();
@@ -61,9 +62,9 @@ const classes = useStyles();
         <div>
         <label>Adress</label>
         <TextField id="outlined-basic" type='text' label="Adress" value={address} onChange={(e) => setAdress(e.target.value)} variant="outlined" />
-        <label>Bygg år</label>
+        <label>Byggår</label>
         <TextField id="outlined-basic" type='number' label="Byggår" value={ByggnadsÅr} onChange={(e) => setByggnadsÅr(e.target.value)} variant="outlined" />
-        <label>Antal Rum</label>
+        <label>Antal rum</label>
         <TextField id="outlined-basic" type='number' label="Antal rum" value={AntalRum} onChange={(e) => setRum(e.target.value)} variant="outlined" />
         <label>Boarea</label>
         <TextField id="outlined-basic" type='text' label="Boarea" value={BoArea} onChange={(e) => setboArea(e.target.value)} variant="outlined" />
@@ -73,11 +74,12 @@ const classes = useStyles();
         <TextField id="outlined-basic" type='text' label="Tomtarea" value={TomtArea} onChange={(e) => setTomtArea(e.target.value)} variant="outlined" />
         <label>Biarea</label>
         <TextField id="outlined-basic" type='text'label="Biarea" value={BiArea} onChange={(e) => setBiArea(e.target.value)} variant="outlined" />
-          <label>Visningsdatum</label>
+          <label>Lägg till Visningdatum</label>
           <Datetime placeholder='Lägg till Visningdatum' value={VisningsDatum} ref={viewingDateRef} />
         </div>
         <br></br>
         <input type='submit' value='Spara Bostad' className='btn btn-block' />
+        <Button onClick={()=>GoBack()}>Gå tillbaka</Button>
       </form>
       </Container>
       )

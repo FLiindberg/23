@@ -23,7 +23,7 @@ function App() {
   }
 
   const fetchDataFromApi = async () => {
-    let result = await fetch("https://localhost:44392/api/Properties", 
+    let result = await fetch("https://localhost:44317/api/Properties", 
       {headers: {
         Authorization: token
       }}
@@ -47,12 +47,12 @@ function App() {
   return (
     <Router>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="/">Bo Bra</a>
+      <Link class="navbar-brand" to="/">Bo Bra</Link>
       <div>
         <ul class="navbar-nav">
           <li>
             {token && 
-              <a class="nav-link" href="/PostProperties">Ny annons<span class="sr-only"></span></a>
+              <Link class="nav-link" to="/PostProperties">Ny annons<span class="sr-only"></span></Link>
             }
           </li>
           <li>
