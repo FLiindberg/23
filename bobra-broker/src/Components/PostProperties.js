@@ -10,7 +10,7 @@ import Button from '@material-ui/core/Button';
 
 function PostProperties(){
 
-    const propertyUrl = `https://localhost:44317/api/Properties`
+  const propertyUrl = process.env.REACT_APP_API_URL + `Properties`
 
     const [address, setAdress] = useState('');
     const [ByggnadsÅr, setByggnadsÅr] = useState();

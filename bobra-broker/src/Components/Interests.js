@@ -20,17 +20,16 @@ import { purple } from '@material-ui/core/colors';
 function Interests(){
 
     let history = useHistory();
-    const interestUrl = `https://localhost:44317/api/Properties/1/Interest_Reg`
+    const interestUrl = process.env.REACT_APP_API_URL + `Properties/1/Interest_Reg`
     const [interest_reg, setInterest_Reg] = useState([]);
     console.log(interest_reg);
 
     useEffect(() => {
-        console.log("nånting");
         if(interest_reg.length === 0) {
             fetch(interestUrl).then(res => res.json().then(data => setInterest_Reg(data)))
         }
     },[])
-    console.log(interest_reg);
+    
     function GoBack() {
         history.push(`/`);
     }

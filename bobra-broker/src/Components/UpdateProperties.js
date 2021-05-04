@@ -25,7 +25,8 @@ function UpdateProperties(){
 
     let history = useHistory();
 
-    const propertyUrl = `https://localhost:44317/api/properties/${id}`
+    
+    const propertyUrl = process.env.REACT_APP_API_URL + `Properties/${id}`
    
     useEffect(() => {
         if(properties.length === 0) {

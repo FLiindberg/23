@@ -20,7 +20,8 @@ import { purple } from '@material-ui/core/colors';
 function GetProperties(){
     
     let history = useHistory();
-    const propertyUrl = `https://localhost:44317/api/Properties`
+    const propertyUrl = process.env.REACT_APP_API_URL + `Properties`
+    // const propertyUrl = `https://localhost:44317/api/Properties`
     const [properties, setProperties] = useState([]);
 
     useEffect(() => {

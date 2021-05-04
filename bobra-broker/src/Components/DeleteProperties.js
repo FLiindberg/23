@@ -12,13 +12,13 @@ function DeleteProperties(){
     const{id} = useParams(); 
 
     let history = useHistory();
-    const propertyUrl = `https://localhost:44317/api/properties/${id}`
+    const propertyUrl = process.env.REACT_APP_API_URL + `Properties/${id}`
     const [properties, setProperties] = useState([]);
     function GoBack(id) {
         history.push(`/`);
     }
     const Delete = () => {
-        fetch(`https://localhost:44317/api/properties/${id}`, {
+        fetch(propertyUrl, {
             method: 'DELETE'
         }).then(() => {
             history.push(`/`)
