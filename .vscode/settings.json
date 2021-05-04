@@ -1,5 +1,5 @@
 {
     "staticWebApps.appSubpath": "/bobra-broker",
-    "staticWebApps.apiSubpath": "api",
+    "staticWebApps.apiSubpath": "",
     "staticWebApps.outputSubpath": "build"
 }
